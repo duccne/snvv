@@ -1359,3 +1359,42 @@ body {
         padding: 8px 20px;
     }
 }
+/* Media Queries cho điện thoại (màn hình dưới 768px) */
+@media screen and (max-width: 768px) {
+    /* 1. Căn chỉnh lại bố cục chính thành cột dọc */
+    .container {
+        flex-direction: column;
+        padding: 10px;
+        height: auto;
+    }
+
+    /* 2. Điều chỉnh khung ảnh (Vòng tròn) */
+    .image {
+        width: 200px; /* Nhỏ lại để vừa màn hình điện thoại */
+        height: 200px;
+        margin: 20px auto;
+    }
+
+    /* 3. Lời chúc (Letter) */
+    .box__letter .letter__border {
+        width: 95%;
+        height: 70vh; /* Giới hạn chiều cao để không bị tràn */
+    }
+
+    .text__letter {
+        font-size: 1rem !important; /* Chữ nhỏ lại dễ đọc hơn */
+        line-height: 1.5;
+    }
+
+    /* 4. Các nút bấm và icon */
+    .funny_icon {
+        display: none; /* Thường ẩn các icon quá rườm rà trên mobile */
+    }
+
+    /* 5. Hiệu ứng pháo hoa và hoa anh đào */
+    #fireworks, .sakura-container {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+    }
+}
